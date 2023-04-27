@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+
+        android:id="@+id/home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNavigation"
+        android:visibility="visible"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/teal_700"
+            >
+<ImageView
+    android:layout_marginLeft="85dp"
+    android:layout_width="30dp"
+    android:layout_height="45dp"
+    android:src="@drawable/baseline_warehouse_24"
+    />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text=" Warehouse Manger"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tool"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNavigation"
+        android:visibility="gone"
+        android:background="@color/white">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_shopping_cart_24"
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+            
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNavigation"
+        android:visibility="gone"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/ordtool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+           >
+            <ImageView
+                android:layout_marginLeft="145dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_content_paste_24"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text=" Orders"
+                android:textColor="@color/black"
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:id="@+id/rv_order"
+           android:layout_below="@+id/ordtool"
+           android:layout_alignParentStart="true"
+           android:layout_alignParentLeft="true"
+           android:layout_alignParentEnd="true"
+           android:layout_alignParentRight="true"
+           android:layout_alignParentBottom="true"
+           android:layout_marginStart="0dp"
+           android:layout_marginLeft="0dp"
+           android:layout_marginTop="0dp"
+           android:layout_marginEnd="0dp"
+           android:layout_marginRight="0dp"
+           android:layout_marginBottom="0dp"/>
+
+    </RelativeLayout>
+
+
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:mbn_backgroundBottomColor="#439A97"
+        app:mbn_circleColor="@color/white"
+        app:mbn_countBackgroundColor="#EFECED"
+        app:mbn_countTextColor="#CDDC39"
+        app:mbn_defaultIconColor="@color/white"
+        app:mbn_rippleColor="#FFEB3B"
+        app:mbn_selectedIconColor="#439A97"
+        android:background="@color/white"
+        app:mbn_shadowColor="@color/white" />
+
+
+
+</RelativeLayout>
